@@ -13,7 +13,7 @@ export default function Reviews({ tema }) {
   const [sucesso, setSucesso] = useState(false);
 
   const carregarAvaliacoes = () => {
-    fetch('http://127.0.0.1:8000/api/avaliacoes')
+    fetch('https://tavern-portfolio.onrender.com/api/avaliacoes')
       .then((res) => res.json())
       .then((dados) => {
         if (Array.isArray(dados)) {

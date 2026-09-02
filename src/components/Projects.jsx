@@ -7,7 +7,7 @@ export default function Projects({ tema }) {
   const [indexAtual, setIndexAtual] = useState(0);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:8000/api/projetos')
+    fetch('https://tavern-portfolio.onrender.com/api/projetos')
       .then((res) => res.json())
       .then((dados) => {
         if (Array.isArray(dados)) {
