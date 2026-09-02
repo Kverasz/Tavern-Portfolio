@@ -46,10 +46,10 @@ export default function Contact({ tema }) {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {/* Coluna 1: Informações de Contato */}
         <div className="space-y-6">
-          <h3 className="text-xl font-bold">Mande um pergaminho</h3>
+          <h3 className="text-xl font-bold">Deixe uma carta</h3>
           
           <p className="opacity-80 leading-relaxed text-sm">
-            Mande uma coruja ou deixe sua mensagem no pergaminho ao lado! 
+            Mande uma carta! 
             Seja para discutir oportunidades de trabalho, projetos de automação em Python ou parcerias web, a taverna está sempre aberta.
           </p>
 
@@ -135,11 +135,11 @@ export default function Contact({ tema }) {
             className="w-full py-3.5 px-6 rounded-lg font-bold bg-amber-500 hover:bg-amber-600 text-slate-950 transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
           >
             {enviando ? (
-              <span>Entregando pergaminho...</span>
+              <span>Entregando Carta...</span>
             ) : (
               <>
                 <Send className="w-4 h-4" />
-                <span>Enviar Pergaminho</span>
+                <span>Enviar Carta</span>
               </>
             )}
           </button>
