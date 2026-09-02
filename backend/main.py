@@ -51,7 +51,7 @@ AVALIACOES_DATABASE = [
         "id": 1,
         "nome": "O Taverneiro",
         "cargo": "Estudante",
-        "comentario": "Exemplo de avaliação!.",
+        "comentario": "Exemplo de avaliação!",
         "estrelas": 5
     }
 ]
