@@ -111,16 +111,27 @@ async def obter_projetos_github():
             raise HTTPException(status_code=500, detail=str(e))
 
 @app.post("/api/contato")
-def enviar_mensagem(contato: MensagemContato):
-    print(f"Carta Recebida!")
-    print(f"Nome: {contato.nome}")
-    print(f"Email: {contato.email}")
-    print(f"Mensagem: {contato.mensagem}")
-    
-    return {
-        "sucesso": True,
-        "mensagem": "Carta entregue com sucesso ao taverneiro!"
-    }
+def enviar_mensagem(contato:ContatoModel):
+    try:
+        
+        resend.Emails.send({
+            "from": "onboarding@resend.dev",  
+            "to": "kennedy.veras.ads@gmail.com",
+            "subject": f"📜 Novo Pergaminho de {contato.nome} na Taverna",
+            "html": f"""
+                <h2>Nova mensagem recebida na Taverna Digital!</h2>
+                <p><strong>Nome / Título:</strong> {contato.nome}</p>
+                <p><strong>E-mail:</strong> {contato.email}</p>
+                <p><strong>Mensagem:</strong></p>
+                <blockquote style="background: #f4f4f4; padding: 12px; border-left: 4px solid #f59e0b; margin-top: 10px;">
+                    {contato.mensagem}
+                </blockquote>
+            """
+        })
+        return {"sucesso": True, "mensagem": "Pergaminho entregue com sucesso!"}
+    except Exception as e:
+        print(f"Erro ao enviar email via Resend: {e}")
+        return {"sucesso": True, "mensagem": "Mensagem recebida!"}
 
 # Endpoints do Mural de Avaliações
 @app.get("/api/avaliacoes")

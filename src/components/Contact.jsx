@@ -101,7 +101,7 @@ export default function Contact({ tema }) {
               required
               value={formData.email}
               onChange={handleChange}
-              placeholder="kennedyveras2005@gmail.com"
+              placeholder="exemplo@gmail.com"
               className={`w-full px-4 py-3 rounded-lg border text-sm outline-none transition-all ${
                 tema === 'noite'
                   ? 'bg-slate-900/80 border-amber-400/20 focus:border-amber-400 text-amber-100'
