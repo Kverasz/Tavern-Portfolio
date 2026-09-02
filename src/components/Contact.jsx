@@ -58,7 +58,7 @@ export default function Contact({ tema }) {
               <div className="p-2.5 rounded-lg bg-amber-500/10 text-amber-500">
                 <Mail className="w-5 h-5" />
               </div>
-              <span>kennedy.veras.ads@gmail.com</span>
+              <span>kennedyveras2005@gmail.com</span>
             </div>
 
             <div className="flex items-center gap-3 text-sm font-medium">
@@ -101,7 +101,7 @@ export default function Contact({ tema }) {
               required
               value={formData.email}
               onChange={handleChange}
-              placeholder="seu.email@exemplo.com"
+              placeholder="kennedyveras2005@gmail.com"
               className={`w-full px-4 py-3 rounded-lg border text-sm outline-none transition-all ${
                 tema === 'noite'
                   ? 'bg-slate-900/80 border-amber-400/20 focus:border-amber-400 text-amber-100'

@@ -49,9 +49,9 @@ CUSTOMIZACOES = {
 AVALIACOES_DATABASE = [
     {
         "id": 1,
-        "nome": "Aventureiro Anônimo",
-        "cargo": "Recrutador de Tecnologia",
-        "comentario": "Excelente taverna! As automações em Python e o visual medieval moderno ficaram impecáveis.",
+        "nome": "O Taverneiro",
+        "cargo": "Estudante",
+        "comentario": "Exemplo de avaliação!.",
         "estrelas": 5
     }
 ]
