@@ -31,7 +31,7 @@ export default function Reviews({ tema }) {
     e.preventDefault();
     setEnviando(true);
 
-    fetch('http://127.0.0.1:8000/api/avaliacoes', {
+    fetch('https://tavern-portfolio.onrender.com/api/avaliacoes', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
